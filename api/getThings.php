@@ -3,13 +3,13 @@
 	$db = $mongo->awesomest;
 
 	$totalThings = $db->things->count();
-// db.yourCollection.find().limit(-1).skip(yourRandomNumber).next(). 
+    // db.yourCollection.find().limit(-1).skip(yourRandomNumber).next(). 
 
 	$thing1 = $db->things->find()->limit(1)->skip(rand(0,$totalThings-1))->getNext();
 	$thing2 = $db->things->find()->limit(1)->skip(rand(0,$totalThings-1))->getNext();
 
 
-
+    // setup 
 	$thing1['id'] = $thing1['_id']->__toString();
 	$thing2['id'] = $thing2['_id']->__toString();
 
