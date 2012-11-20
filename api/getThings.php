@@ -13,9 +13,11 @@
 	$thing1['id'] = $thing1['_id']->__toString();
 	$thing2['id'] = $thing2['_id']->__toString();
 
+    // what does this do??
 	unset($thing1['_id']);
 	unset($thing2['_id']);
 
+    
 	$output = array();
 	array_push($output,$thing1);
 	array_push($output,$thing2);

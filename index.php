@@ -1,9 +1,7 @@
 <html>
 <head><title>Awesomest 3000</title>  </head>
 <body>
-<!-- 
-    we can use this file for screwing around with css. when it's working, move stuff over to the php file.
--->
+
 
 <h1>Awesomest 3000</h1>
 
