@@ -1,8 +1,19 @@
 
+/***
+* layout
+*
+*/
+
+body {
+    padding-top:20px;
+}
+
 .container-narrow { 
     margin:0 auto;
     width:960px;
 }
+
+
 
 header h1 {
     display:block; width:143px;
