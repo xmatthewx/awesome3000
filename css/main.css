@@ -1,5 +1,5 @@
 
-/***
+/*************
 * layout
 *
 */
@@ -12,14 +12,25 @@ body {
     margin:0 auto;
     width:960px;
 }
+    
 
-
+/*************
+* typography
+*
+*/
 
 header h1 {
     display:block; width:143px;
     height:0; padding:98px 0 0; overflow:hidden; /* img txt replacement: see: http://www.mezzoblue.com/tests/revised-image-replacement  */ 
     background: url('../images/instaslam_logo.png') center center no-repeat;    
 }
+
+
+
+/*************
+* nav
+*
+*/
 
 nav {
     border:1px solid #000;
@@ -40,6 +51,12 @@ nav a:hover {
     text-decoration:none;
     cursor:pointer;
     }
+
+
+/*************
+* choice
+*
+*/
 
 #choice {
     width:100%;
@@ -77,8 +94,6 @@ nav a:hover {
 }
 
 
-
-
 #choice p {
     clear:both;
     font-size:2em;
@@ -88,6 +103,30 @@ nav a:hover {
     top:1em;
 }
 
+
+/*************
+* footer
+*
+*/
+
 footer { 
     clear:both;
     }
+
+
+/*************
+* responsize
+*
+*/
+
+@media screen and (max-width: 800px){   
+    .container-narrow { 
+        margin:0 auto;
+        width:420px;
+    }
+    #choice a#thing2 {
+        float:left;
+        margin-top:10px;
+    }
+
+}
