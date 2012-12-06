@@ -21,8 +21,11 @@ data
 done
 ======
 
-- i set up rough approx of jenn's design in html and css
-- anthony and i got the instagram api working with javascript
+- jenn finished much of the design
+- mw set up rough approx of jenn's design in html and css
+- anthony and mw got the instagram api working with javascript
+- mw set up js for switching between tags
+
 
 next
 ======
