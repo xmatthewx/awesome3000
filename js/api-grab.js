@@ -16,7 +16,7 @@ var currenttag=["hipster", "wtf", "lol"];
 			}
 
 
-function grabInsta(){
+function grabInstam(){
 
 $.getJSON( url, function(insta){
 
@@ -38,3 +38,28 @@ $.getJSON( url, function(insta){
 
 };
 	
+
+  "id", 
+        "username", 
+        "full_name",
+        "profile_picture", 
+        "bio",
+        "website",
+        "counts": {"media", "follows", "followed_by" }
+	"location": {"latitude", "longitude", "name" (Example: "Civic Center BART"), }
+        "comments": {"count", "data": [ ... ]}
+        "caption"
+        "likes": {"count"}   
+        "standard_resolution": {"url", "width", "height"}
+        "type" (EXAMPLE, "image")
+        "filter",
+        "tags",
+
+
+  db.InstaSlam.insert([{instaSlamId:'id', instaSlamUsername:'username', instaSlamProfilePicture:'profile_picture', instaSlamBio:'bio', instaSlamWebsite:'website',
+instaSlamCaption:'caption', instaSlamStandardResolution:''}])
+
+
+
+
+
