@@ -4,8 +4,11 @@ files
 * css/main.css  ... primary style sheet
 * index.php     ... homepage
 * ?????         ... php to grab new images from instagram
-* ?????         ... js to grab 2 imgs from mongo db
-* ?????         ... js to add win to mongo db
+* ?????         ... php to grab 2 imgs from mongo db
+* ?????         ... php to add win to mongo db
+* ?????         ... php to grab stats
+* ?????         ... php to leader board
+
 
 
 data
