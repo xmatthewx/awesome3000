@@ -1,3 +1,10 @@
+/*
+    all JS has been moved to js/main.js
+    
+*/
+
+
+
    var currenttag=["hipster","wtf","lol"];
 
 	for (i = 0; i < currenttag.length; i++){

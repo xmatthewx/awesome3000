@@ -8,7 +8,7 @@ files
 * ?????         ... php to add win to mongo db
 * ?????         ... php to grab stats
 * ?????         ... php to leader board
-
+* js/main.js    ... instagram api, instaslam db api, ui functions 
 
 
 data
