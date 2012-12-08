@@ -1,18 +1,23 @@
-var currenttag=["hipster","wtf","lol"];
 
+
+
+var currenttag=["hipster", "wtf", "lol"];
+
+
+//,"wtf","lol","fail"];
 
 	for (i = 0; i < currenttag.length; i++){
 			
-			
+			console.log(currenttag[i]);
 			var url="https://api.instagram.com/v1/tags/"+ currenttag[i] +"/media/recent?count=4&access_token=10239.2fa8a45.08f28ab239bf42a29a70321b2bad4ef0&callback=?";
 			grabInsta();
 			
 			}
 
 
-function grabInsta(){
+function grabInstam(){
 
-	$.getJSON( url, function(insta){
+$.getJSON( url, function(insta){
 
 	console.log(insta);
 
@@ -26,7 +31,9 @@ function grabInsta(){
 
 			$('body').append('<div><img src="'+ url +'" /></div>');
 
+				// })
 			});
 	});
 
 };
+	
