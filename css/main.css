@@ -1,6 +1,6 @@
 
 /*************
-* layout
+* GENERAL LAYOUT
 *
 */
 
@@ -15,53 +15,136 @@ body {
     
 
 /*************
-* typography
+* GENERAL TYPOGRAPHY
 *
 */
 
 header h1 {
-    display:block; width:143px;
-    height:0; padding:98px 0 0; overflow:hidden; /* img txt replacement: see: http://www.mezzoblue.com/tests/revised-image-replacement  */ 
+    display:block;
+    width:124px;
+    height:0;
+    padding:98px 0 0;
+    overflow:hidden; /* img txt replacement: see: http://www.mezzoblue.com/tests/revised-image-replacement  */ 
     background: url('../images/instaslam_logo.png') center center no-repeat;    
 }
 
 
+.tag {
+	font-family: "futura-pt", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.bold {
+	font-weight: 500;
+}
+
+.futura {
+	font-family: "futura-pt", Helvectica, Arial, sans-serif;
+	text-transform: uppercase;
+}
 
 /*************
-* nav
+* SPLASH PAGE	
+*/
+
+#big-logo {
+	width: 250px;
+	height: 170px;
+	padding: 170px 0 20px 0;
+	margin: 0px auto;
+}
+
+#tagline {
+	height: 25px;
+	width: 700px;
+	border:1px solid #000;
+    border-width:1px 0 2px;
+    padding: 25px 0 20px 0;
+    margin: 0px auto;
+}
+
+#tagline h2 {
+	font-family: "futura-pt", Helvetica, Arial, sans-serif;
+    font-size:40px;
+    line-height: 0px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#play-btn {
+	width: 230px;
+	height: 82px;
+	margin: 0px auto;
+}
+
+
+/*************
+* TOP NAVIGATION
 *
 */
 
 nav {
     border:1px solid #000;
-    border-width:2px 0 3px;
-    padding:1em 0;    
+    border-width:2px 0 4px;
+    padding: 20px 0;   
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	display: inline;
+	margin-right:36px;
 }
 
 nav a {
-    color:black;
-    font-weight:bold;
+    font-family: "futura-pt", Helvectica, Arial, sans-serif;
+    font-size:22px;
+    font-weight:500;
     text-transform:uppercase;
+    color:#000;
     text-decoration:none;
-    margin-right:10px;
 }
 
 nav a:hover { 
     text-decoration:none;
     cursor:pointer;
-    color:#ff00ff;
-    color:#fff;
-    background:#666;
+    color:#666;
     }
+    
+nav li.nav-btn {
+	background-color: #ccc;
+	height: 43px;
+	width: 120px;
+	float: right;
+	margin: -20px 0 0 0;
+	padding-top: 19px;
+}
 
+nav li.nav-btn:hover {
+	background-color: #999;
+}
+
+nav li.nav-btn a {
+	font-family: "lobster", Georgia, serif;
+	font-weight: normal;
+	text-transform: none;
+	margin-left: 20px;
+}
 
 /*************
-* choice
+* CHOICE (MAIN CAGE MATCH)
 *
 */
 
 #choice {
     width:100%;
+    height: 480px;
 }
 
 #choice a {
@@ -71,12 +154,41 @@ nav a:hover {
     height:416px;
     width:416px;
     background:#eee;
+    margin-top: -30px;
 }
-#choice a#thing1 {
-    float:left;
+
+#left-choice {
+    width: 416px;
+    height: 440px;
+    float: left;
 }
-#choice a#thing2 {
-    float:right;
+
+#left-choice .left-tape {
+	position:relative;
+	left:0px;
+	top:0px;
+	width: 130px;
+	height: 50px;
+	background-image:url('../images/tape_left.png');
+	margin: 0px auto;
+	z-index: 3;
+}
+
+#right-choice {
+    width: 416px;
+    height: 440px;
+    float: right;
+}
+
+#right-choice .right-tape {
+	position:relative;
+	left:0px;
+	top:0px;
+	width: 130px;
+	height: 50px;
+	background-image:url('../images/tape_right.png');
+	margin: 0px auto;
+	z-index: 3;
 }
 
 #choice a p {
@@ -84,42 +196,225 @@ nav a:hover {
     position:absolute;
     top:0; left:0;
     width:416px;
-    height:236px; /* padding + height = img height */
-    padding:180px 0 0;
+    height:226px; /* padding + height = img height */
+    padding:190px 0 0;
     margin:0;
-    font-size:3em;
-    background:rgba(0,0,0,0.5);
+    font-family: "futura-pt", Helvetica, Arial, sans-serif;
+    font-size:70px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background:rgba(0,0,0,0.25);
     color:white;
     text-align:center;
 }
+
 #choice a:hover p {
     display:block;
 }
 
-
-p#prompt {
+#prompt {
+    width: 920px;
+    float: left;
     clear:both;
-    font-size:2em;
-    text-align:center;
-    margin:1em 0;
-    padding-top:1em;
-    top:1em;
+    margin-top: 30px;
 }
 
-p#prompt em { /* tag */
-    font-style:italic;
+
+#prompt p {
+    font-family:"lobster", Georgia, serif;
+    font-weight: normal;
+    font-size:60px;
+    text-align:center;
+}
+
+
+
+/*************
+* WINNER
+*/
+
+#winner {
+	height: 320px;
+}
+
+.img-and-cap {
+	float: left;
+	width: 285px;
+	height: 320px;
+	margin-right: 40px;
+}
+
+.img-and-cap img {
+	width: 285px;
+	height: 285px;
+}
+
+.img-and-cap p {
+	font-family: "futura-pt", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+.img-and-cap a {
+	text-decoration: underline;
+	color: #000;
+}
+
+#score-blurb {
+	width: 600px;
+	height: 132px;
+	margin-top: 40px;
+	float:left;
+}
+
+#score-blurb p {
+	font-family: "futura-pt", Helvetica, Arial, sans-serif;
+	font-size: 40px;
+	line-height: 44px;
+	text-transform: uppercase;
+	font-weight: 100;
+}
+
+#score-btns {
+	float: left;
+	clear: right;
+	width: 350px;
+	height: 70px;
+}
+
+#score-btns img {
+	margin: 20px 10px 0 0;
+}
+
+/****************************************
+* TOP FOUR IMAGES FOR WINNER'S CATEGORY
+*/
+
+#top-from-cat {
+	height: 287px;
+	margin-top: 50px;
+}
+
+.section-title {
+	height: 15px;
+	border:1px solid #000;
+    border-width:1px 0 2px;
+    padding: 10px 0;
+    margin-bottom: 10px;  
+}
+
+#top-from-cat h3 {
+	font-family:"lobster", Georgia, serif;
+    font-size:20px;
+    line-height: 0px;
+    font-weight:normal;
+    color:#000;
+    margin-top: 7px;
+}
+
+#top-from-cat .img-and-cap {
+	height: 236px;
+	width: 210px;
+	float: left;
+}
+
+#top-from-cat .img-and-cap:last-child {
+	margin-right: 0;
+}
+
+#top-from-cat .img-and-cap img {
+	width: 205px;
+	height: 205px;
+}	
+
+#top-from-cat .img-and-cap p.rank {
+	display:block;
+    position:relative;
+    top:-244px; left:0;
+    width:205px;
+    height:105px;
+    padding:100px 0 0;
+    margin:0;
+    font-family: "futura-pt", Helvetica, Arial, sans-serif;
+    font-size:70px;
+    font-weight: 300;
+    text-transform: uppercase;
+    background:rgba(0,0,0,0.25);
+    color:white;
+    text-align:center;
 }
 
 
 /*************
-* footer
+* FOOTER
 *
 */
 
 footer { 
+    float: left;
     clear:both;
-    }
+    height: 280px;
+    background-color: #000;
+    padding: 30px 20px 20px 20px;
+    margin-top: 130px;
+}
+    
+footer p {
+	color: #fff;
+}
 
+#foot-about {
+	width: 710px;
+	height: 80px;
+	float: left;
+}	
+
+#foot-about p {
+	font-family: "futura-pt", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	line-height: 26px;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+#social {
+	float: right;
+	width: 30px;
+	height: 75px;
+}
+
+#social a img{
+	display: block;
+	width: 24px;
+	height: 25px;
+	margin-bottom: 5px;
+}
+
+#disclaimer {
+	width: 910px;
+	height: 160px;
+	float: left;
+	clear: both;
+	margin-top: 30px;
+}
+
+#disclaimer h5 {
+	font-family: "futura-pt", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	color: #fff;
+	text-transform: uppercase;
+	border-bottom: 1px solid #fff;
+}
+
+#disclaimer p {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: normal;
+	color: #ccc;
+}
 
 /*************
 * responsize
