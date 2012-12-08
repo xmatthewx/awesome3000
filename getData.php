@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 <!--Work In Progress ANTHONY-->
 <!--GET DATA OUT FROM DB-->
 
 
+=======
+>>>>>>> f4072caea0be5e4dbf3b456e856c019308e9df4c
 <?php
+/*
+    this appears to be a duplicate of getAPI.php
+*/
 	$mongo = new Mongo();
 	$db = $mongo->InstaSlamDB;
 	$things = $db->things->find();

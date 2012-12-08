@@ -1,3 +1,7 @@
+/*
+    instaslams custom js
+*/
+
 /*************
 * tags
 *

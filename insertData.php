@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 <!--Work In Progress ANTHONY-->
 <!--INSERT DATA INTO DB-->
 <!--This is where i need json from instagram api js-->
 
+=======
+>>>>>>> f4072caea0be5e4dbf3b456e856c019308e9df4c
 <?php
+/*
+    this file inserts data in mongo db
+    should probably be tweaked to handle either 
+        new imgs from instagram
+        or new wins from user clicks
+*/
 
 	$mongo = new Mongo();
 	$db = $mongo->InstaSlam;
@@ -25,10 +34,6 @@
 	$response['status'] = 'okay';
 
 	echo json_encode($response);
-
-
-	
-
 
 
 ?>

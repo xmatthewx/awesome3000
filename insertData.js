@@ -1,3 +1,9 @@
+/*
+    this js file has php in it that won't work
+    AT learned that js cannot connect to mongo without node
+    probably should be deleted
+*/
+
 db.InstaSlam.insert([{instaSlamId:'id', instaSlamUsername:'username', instaSlamProfilePicture:'profile_picture', instaSlamBio:'bio', instaSlamWebsite:'website',
 instaSlamCaption:'caption', instaSlamStandardResolution:''}])
 
