@@ -1,7 +1,10 @@
-<!--GET DATA OUT FROM DB-->
-
-
 <?php
+/* 
+    Get two random images from Mongo DB 
+    this file should probably be moved to /API or /PHP
+*/
+
+    // this redundant DB stuff could be moved to config.php and included here
 	$mongo = new Mongo();
 	$db = $mongo->InstaSlamDB;
 	$things = $db->things->find();

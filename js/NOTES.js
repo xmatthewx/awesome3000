@@ -1,4 +1,5 @@
 // DATABASE SCHEMA
+// jamie's notes
 [{
 	id:"8943589345809342"
 	name:"Power Pad",

@@ -1,7 +1,7 @@
-<!--GET DATA OUT FROM DB-->
-
-
 <?php
+/*
+    this appears to be a duplicate of getAPI.php
+*/
 	$mongo = new Mongo();
 	$db = $mongo->InstaSlamDB;
 	$things = $db->things->find();

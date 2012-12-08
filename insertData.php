@@ -1,6 +1,10 @@
-<!--INSERT DATA INTO DB-->
-
 <?php
+/*
+    this file inserts data in mongo db
+    should probably be tweaked to handle either 
+        new imgs from instagram
+        or new wins from user clicks
+*/
 
 	$mongo = new Mongo();
 	$db = $mongo->InstaSlam;
@@ -23,10 +27,6 @@
 	$response['status'] = 'okay';
 
 	echo json_encode($response);
-
-
-	
-
 
 
 ?>

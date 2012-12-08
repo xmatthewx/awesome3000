@@ -1,5 +1,11 @@
-
-
+/*
+    this appears to be a duplicate of js/api-grab.js
+    this should probaby be deleted
+    
+    get new images from instagram
+    trigger php to add them to mongo db
+    this should probably be moved to /js 
+*/
 
 var currenttag=["hipster", "wtf", "lol"];
 

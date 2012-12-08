@@ -1,4 +1,9 @@
 <?php
+/*
+    jamie's code to get random items from mongo db
+*/
+
+
 	$mongo = new Mongo();
 	$db = $mongo->awesomest;
 
