@@ -31,7 +31,9 @@ $('nav a').click( function(){
 
 // swaps tag name in several places
 function updatetag(tag){
-    $('em.tag').html('#'+tag);    
+    $('em.tag').html('#'+tag);  
+    $('nav a').removeClass('active');
+    $('nav a#' +tag).addClass('active');  
 }
 
 
