@@ -1,4 +1,6 @@
+<!--Work In Progress ANTHONY-->
 <!--INSERT DATA INTO DB-->
+<!--This is where i need json from instagram api js-->
 
 <?php
 
