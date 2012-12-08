@@ -50,11 +50,12 @@ function displayImage(img1,img2) {
 
 	$('#thing1').attr('title','img by: ' + img1.user.username);
 	$('#thing1 img').attr('src',img1.images.standard_resolution.url);
-	$('#thing1').data( 'slam', { id: img1.user.id, user: img1.user.username, tag: current_tag } );
+	$('#thing1').data( 'slam', { pid: img1.user.id, user: img1.user.username, tag: current_tag } );
     
 	$('#thing2').attr('title','img by: ' + img2.user.username);
 	$('#thing2 img').attr('src',img2.images.standard_resolution.url);
-	   
+	$('#thing2').data( 'slam', { pid: img2.user.id, user: img2.user.username, tag: current_tag } );
+   	
 }
 
 
@@ -64,12 +65,13 @@ function displayImage(img1,img2) {
 *
 */
 
-$('#thing1').click( function(){
+$('#choice a').click( function(){
     
-    var id = $('#thing1').data("slam").id;
-    var user = $('#thing1').data("slam").user;
-    var tag = $('#thing1').data("slam").tag;
-    alert(user + ' is the most #' +tag+ '!\n\nhi jenn, give me html with some good ids or classes and i will replace this.');
+    id = $(this).attr('id');
+    var pid = $('#' + id).data("slam").pid;
+    var user = $('#' + id).data("slam").user;
+    var tag = $('#' + id).data("slam").tag;
+    alert(user + '\'s pic is the most #' +tag+ '!\n\nhi jenn, give me html with some good ids or classes and i will replace this.');
     
     queryInsta(current_tag);
     
