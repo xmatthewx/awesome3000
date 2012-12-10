@@ -9,6 +9,8 @@ files
 * ?????                 ... php to grab stats
 * ?????                 ... php to leader board
 * js/main.js            ... instagram api, instaslam db api, ui functions 
+    * change var site_url = your localhost or live site url
+
 
 
 data
