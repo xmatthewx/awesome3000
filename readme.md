@@ -1,14 +1,14 @@
 files
 =======
 
-* css/main.css  ... primary style sheet
-* index.php     ... homepage
-* ?????         ... php to grab new images from instagram
-* ?????         ... php to grab 2 imgs from mongo db
-* ?????         ... php to add win to mongo db
-* ?????         ... php to grab stats
-* ?????         ... php to leader board
-* js/main.js    ... instagram api, instaslam db api, ui functions 
+* css/main.css          ... primary style sheet
+* index.php             ... homepage
+* api/instagram_api.php ... php to grab new pics from instagram and add to db
+* ?????                 ... php to grab 2 imgs from mongo db
+* ?????                 ... php to add win to mongo db
+* ?????                 ... php to grab stats
+* ?????                 ... php to leader board
+* js/main.js            ... instagram api, instaslam db api, ui functions 
 
 
 data
@@ -31,6 +31,7 @@ done
 - mw set up rough approx of jenn's design in html and css
 - anthony and mw got the instagram api working with javascript
 - mw set up js for switching between tags
+- mw: js now triggers php api to grab pics and add to DB
 
 
 next
