@@ -9,8 +9,10 @@
  var instragram_key = "&access_token=10239.2fa8a45.08f28ab239bf42a29a70321b2bad4ef0";
  var getcount = "?count=3";
  var callback = "&callback=?";
- var url;
+ var instagram_url;
  var current_tag;
+
+ var site_url = 'http://localhost/amazon/instaslam/'; // change to your localhost or live site url
 
 
 
@@ -45,8 +47,8 @@ function updatetag(tag){
 function displayImage(img1,img2) {
     
     console.log('display image');
-    console.log(img1);
-    console.log(img2);
+    // console.log(img1);
+    // console.log(img2);
 
 	$('#thing1').attr('title','img by: ' + img1.user.username);
 	$('#thing1 img').attr('src',img1.images.standard_resolution.url);
@@ -74,6 +76,7 @@ $('#choice a').click( function(){
     alert(user + '\'s pic is the most #' +tag+ '!\n\nhi jenn, give me html with some good ids or classes and i will replace this.');
     
     queryInsta(current_tag);
+    addnewtoDB(current_tag);
     
 })
 
@@ -85,45 +88,39 @@ $('#choice a').click( function(){
 *
 */
 
+// using this until we can grab from mongo DB
 function queryInsta(tag) {
-    url="https://api.instagram.com/v1/tags/"+ tag +"/media/recent" + getcount + instragram_key + callback;
+    instagram_url="https://api.instagram.com/v1/tags/"+ tag +"/media/recent" + getcount + instragram_key + callback;
 	grabInsta();
 }
 
 
 function grabInsta(){
-
     var insta;
     console.log('get instagram json: ');
 
-	$.getJSON( url, function(insta){
-    	console.log(insta);
-
+	$.getJSON( instagram_url, function(insta){
+    	// console.log(insta);
     	displayImage(insta.data[0],insta.data[1]);
-
-        // no longer in use
-        /*
-    	$.each(insta.data, function(key,item){
-
-    			url = item.images.standard_resolution.url;
-    			username = item.user.username;
-    			id = item.id;
-    			time = item.created_time;
-    			tags = item.tags;
-    			commentsCount = item.comments.count;
-    			caption = item.caption.text;
-    			likes = item.likes.count;
-    			filter = item.filter;
-
-    			$('body').append('<div><img src="'+ url +'" />')
-    			    .append('<p>username:"'+ username +'" </p></div>')
-    			    .append('<p>id:"'+ id +'" </p>');
-	
-    		});
-    	*/
     }); // END getJSON
     
 };
+
+
+/*************
+* mongo API
+*
+*/
+
+// trigger php to grab new images from instagram
+function addnewtoDB(addtag){
+    
+    console.log('addnewtoDB: ' + addtag);
+    $.post( site_url + '/api/instagram_api.php',{ tag: addtag }, function(data) {
+        console.log(data);
+    });
+    
+}; 
 
 
 /*************
@@ -151,7 +148,7 @@ function testloop(){
 */
 
 console.log('everything loaded. grab first images.');
+current_tag = 'hipster';
 updatetag('hipster');
 queryInsta('hipster');
-current_tag = 'hipster';
 

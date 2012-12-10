@@ -2,20 +2,19 @@
 
 	if(isset($_POST['name'])) {
 	    
-        $name = $_POST['name'];
+        $id = $_POST['id'];
         $url = $_POST['url'];
-        $image = $_POST['image'];
+        $user = $_POST['user'];
 
-        $_FILES['whatever'];
+        // $_FILES['whatever'];
 
         $mongo = new Mongo();
-        $db = $mongo->awesomest;
-
+        $db = $mongo->InstaSlam;
 
         $thing = array();
-        $thing['name'] = $name;
+        $thing['id'] = $id;
         $thing['url'] = $url;
-        $thing['image'] = $image;
+        $thing['user'] = $user;
         $thing['wins'] = 0;
         $thing['losses'] = 0;
 
@@ -28,8 +27,8 @@
 
 ?>
 <form action="index.php" method="post">
-	<p>Name: <input type="text" name="name" /></p>
+	<p>ID: <input type="text" name="id" /></p>
 	<p>URL: <input type="text" name="url" /></p>
-	<p>Image: <input type="text" name="image" /></p>	
+	<p>User: <input type="text" name="user" /></p>	
 	<p><input type="submit" /></p>
 </form>
