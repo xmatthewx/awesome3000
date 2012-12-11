@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="css/main.css">
 
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
+    <script src="js/vendor/jquery-1.8.3.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/vendor/fancy.js"></script>  
 	
 	<!-- TYPEKIT -->
 	<script type="text/javascript" src="//use.typekit.net/vpv0gej.js"></script>
@@ -35,31 +37,13 @@
         
         <nav class="nav">
         	<ul>
-        		<li><a id="hipster" href="#" >#hipster</a></li>
-            	<li><a id="wtf" href="#" >#wtf</a></li>
-            	<li><a id="fail" href="#" >#fail</a></li>
-            	<li><a id="douchebag" href="#" >#douchebag</a></li>
-           		<li> <a id="sexy" href="#" >#sexy</a></li>
-            	<li><a id="ftw" href="#" >#ftw</a></li>
-            	<li class="nav-btn"><a id="stats" href="stats.html">view stats</a></li>
+        		<li id="fame">hall of fame:</li>
+        		<li><a id="today" href="#" >today</a></li>
+            	<li><a id="all-time" href="#" >all time</a></li>
+            	<li class="nav-btn"><a id="stats" href="index.html">play game</a></li>
             </ul>
         </nav>
 
-        <section id="winner">
-        	<div class="img-and-cap">
-        		<img alt="thing 1" src="http://distilleryimage2.s3.amazonaws.com/100363d23f4d11e28dba22000a1f97e5_7.jpg"/>
-        		<p>photo by <a href="#">itsjennkaye</a></p>
-        	</div><!-- end img-and-cap -->
-      
-            <div id="score-blurb">
-            	<p><span class="bold">52</span>/973 PEOPLE agree that this photo is the most <span class="bold">#hipster.</span></p>
-            </div> <!-- end score blurb -->
-            
-            <div id="score-btns">
-            	<a href="#"><img src="images/next_btn.png" alt="next photo" /></a>
-            	<a href="#"><img src="images/new_cat_btn.png" alt="new category" /></a>
-            </div><!-- end score-btns -->
-        </section>
         
         <section id="top-from-cat">
         	<div class="section-title">
@@ -92,21 +76,40 @@
         	
         </section><!-- end top-from-cat -->
         	
-        </section><!-- end top-from-cat -->
-
 
         <footer>
         	<section id="foot-about">
         		<p>This is the coolest website you will ever see. Anthony is going to write some more stuff to go in this section. Maybe one more sentEnce goes in this spot here. I will be informative.</p>
         	</section><!-- end foot-about -->
         	<section id="social">
-        		<a href="#"> <img src="images/facebook.png" alt="facebook" /></a>
-        		<a href="#"> <img src="images/twitter.png" alt="twitter" /></a>
-        		<a href="#"> <img src="images/reddit.png" alt="reddit" /></a>
+        		<a href="#" class="fb">&nbsp;</a>
+        		<a href="#" class="tw">&nbsp;</a>
+        		<a href="#" class="rd">&nbsp;</a>
         	</section> <!-- end social-->
         	<section id="disclaimer">
         		<h5>Disclaimer</h5>
-        		<p>FAIR USE NOTICE: This site may contain copyrighted material the use of which has not been pre-authorized by the copyright owner. Such material is made available as parody and/or to advance understanding of political, economic, scientific, social, art, media, and cultural issues. The 'fair use' of any such copyrighted material that may exist on this site is provided for under U.S. Copyright Law. In accordance with U.S. Code Title 17, Section 107, material on this site is distributed without profit to persons interested in such information for research and educational purposes. If you want to use any copyrighted material that may exist on this site for purposes that go beyond 'fair use', you must obtain permission from the copyright owner. If you feel that any of the images used on this site infringe on your rights, please send us an official request to remove them, including the nature of your claim and proof of ownership, to ihavebeef[at]instaslam.it.</p>
+        		<img src="images/disclaimer_triangle_closed.png" />
+        		<hr>
+        		<div id="disclaimer-blurb">
+        			<p>FAIR USE NOTICE: This site may contain copyrighted material the use of which has not been pre-authorized by the copyright owner. Such material is made available as parody and/or to advance understanding of political, economic, scientific, social, art, media, and cultural issues. The 'fair use' of any such copyrighted material that may exist on this site is provided for under U.S. Copyright Law. In accordance with U.S. Code Title 17, Section 107, material on this site is distributed without profit to persons interested in such information for research and educational purposes. If you want to use any copyrighted material that may exist on this site for purposes that go beyond 'fair use', you must obtain permission from the copyright owner. If you feel that any of the images used on this site infringe on your rights, please send us an official request to remove them, including the nature of your claim and proof of ownership, to ihavebeef[at]instaslam.it.</p>
+        			<p>Instaslam.it is a trademark of the four students that created this site. All other names and logos that appear on this website are the trademarks of their respective owners and do not constitute any endorsement, support or approval of them.</p>
+        		</div> <!-- end disclaimer blurb -->
+
+
+        	</section> <!-- end disclaimer -->
+        </footer>
+    </div><!-- end container-->
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+</body>
+</html>
+d us an official request to remove them, including the nature of your claim and proof of ownership, to ihavebeef[at]instaslam.it.</p>
 
 <p>Instaslam.it is a trademark of the four students that created this site. All other names and logos that appear on this website are the trademarks of their respective owners and do not constitute any endorsement, support or approval of them.</p>
         	</section> <!-- end disclaimer -->
