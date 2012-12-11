@@ -2,7 +2,10 @@ files
 =======
 
 * css/main.css          ... primary style sheet
-* index.php             ... homepage
+* index.php             ... homepage (currently index.HTML)
+* splash.html           ... initital "splash page" that shows before the game starts
+* results.html          ... the page you get after you click a photo on index.html (instead of the alert dialogue)
+* stats.html            ... leaderboard
 * api/instagram_api.php ... php to grab new pics from instagram and add to db
 * ?????                 ... php to grab 2 imgs from mongo db
 * ?????                 ... php to add win to mongo db
@@ -34,6 +37,7 @@ done
 - anthony and mw got the instagram api working with javascript
 - mw set up js for switching between tags
 - mw: js now triggers php api to grab pics and add to DB
+- JK: All the pages exist and are styled (inclduing Typekit fonts). Images have been sliced. Buttons and links have hover states. I started a new JS file for fancy front-end functionality. I have implemented an expand/collapse thingy to the disclaimer in the footer.
 
 
 next
@@ -47,6 +51,7 @@ next
 - write js to grab stats from db
 - set up server -- this could be a pain. we should get this rolling.
 - anything else?
+- JK: finish additional front-end fancy javascript, add color to design. 
 
 later (if there's time)
 ======
