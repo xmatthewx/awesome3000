@@ -12,15 +12,7 @@
 	// SOMEHOW, THIS SECTION WORKS WITH JUST THE GRABINSTA FUNCTION BEING CALLED AND NO REFERENCE TO THE API ACCESS TOKEN. I DONT GET IT
 	
 				var url="https://api.instagram.com/v1/tags/"+ currenttag[i] +"/media/recent?count=4&access_token=10239.2fa8a45.08f28ab239bf42a29a70321b2bad4ef0&callback=?";
-				// var username="https://api.instagram.com/v1/media/"+ currenttag[i] +"/recent?count=4access_token=10239.2fa8a45.08f28ab239bf42a29a70321b2bad4ef0&callback=?";		
-				// 				var id="https://api.instagram.com/v1/users/"+ currenttag[i] +"/recent?count=4&access_token=10239.2fa8a45.08f28ab239bf42a29a70321b2bad4ef0&callback=?";
-				// 				var tags="https://api.instagram.com/v1/tags/"+ currenttag[i] +"/recent?count=4&access_token=10239.2fa8a45.08f28ab239bf42a29a70321b2bad4ef0&callback=?";
-				// 				var caption="https://api.instagram.com/v1/media/"+ currenttag[i] +"/comments?access_token=10239.2fa8a45.08f28ab239bf42a29a70321b2bad4ef0&callback=?";
-				// 				var filter="https://api.instagram.com/v1/media/"+ currenttag[i] +"/comments?access_token=10239.2fa8a45.08f28ab239bf42a29a70321b2bad4ef0&callback=?";
-				// 				var likes="https://api.instagram.com/v1/media/"+ currenttag[i] +"/comments?access_token=10239.2fa8a45.08f28ab239bf42a29a70321b2bad4ef0&callback=?";
-				// 				var commentsCount="https://api.instagram.com/v1/media/"+ currenttag[i] +"/comments?access_token=10239.2fa8a45.08f28ab239bf42a29a70321b2bad4ef0&callback=?";
-				// 	
-				// 		
+
 		
 			grabInsta();
 

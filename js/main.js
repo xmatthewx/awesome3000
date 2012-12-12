@@ -12,7 +12,8 @@
  var instagram_url;
  var current_tag;
 
- var site_url = 'http://localhost/amazon/instaslam/'; // change to your localhost or live site url
+ var site_url = 'http://ec2-50-17-170-92.compute-1.amazonaws.com'; // change to your localhost or live site url
+ var username = 'item.user.username';
 
 
 
@@ -25,10 +26,12 @@
 $('nav a').click( function(){
     current_tag = $(this).attr('id');
     console.log(current_tag +' clicked');
-    updatetag(current_tag);
-    // queryDB(tag);
+    updatetag(current_tag); // STYLING STUFF
+    // queryDB(tag);   // Initial two images will eventually come from DB, not instagram
     queryInsta(current_tag);
+
 })
+
 
 
 // swaps tag name in several places
@@ -69,15 +72,17 @@ function displayImage(img1,img2) {
 
 $('#choice a').click( function(){
     
-    id = $(this).attr('id');
-    var pid = $('#' + id).data("slam").pid;
-    var user = $('#' + id).data("slam").user;
-    var tag = $('#' + id).data("slam").tag;
+    id = $(this).attr('id');				  					//	mongo id
+    pid = $('#' + id).data("slam").pid;   						//	photo id
+    user = $('#' + id).data("slam").user;						//	user id
+    var tag = $('#' + id).data("slam").tag;						// 	tag
+
     alert(user + '\'s pic is the most #' +tag+ '!\n\nhi jenn, give me html with some good ids or classes and i will replace this.');
     
-    queryInsta(current_tag);
-    addnewtoDB(current_tag);
+    queryInsta(current_tag);				// Ask instagram for tag name
+    addnewtoDB(current_tag);				// Add new photo to databse
     
+	
 })
 
 
@@ -92,6 +97,8 @@ $('#choice a').click( function(){
 function queryInsta(tag) {
     instagram_url="https://api.instagram.com/v1/tags/"+ tag +"/media/recent" + getcount + instragram_key + callback;
 	grabInsta();
+	//addnewtoDB(instagram_url);				// Ask instagram for tag name
+    
 }
 
 
@@ -115,10 +122,16 @@ function grabInsta(){
 // trigger php to grab new images from instagram
 function addnewtoDB(addtag){
     
-    console.log('addnewtoDB: ' + addtag);
     $.post( site_url + '/api/instagram_api.php',{ tag: addtag }, function(data) {
-        console.log(data);
+    	console.log(data);
     });
+
+
+    console.log('addnewtoDB Tag: ' + addtag);
+   	console.log('addnewtoDB URL: ' + instagram_url);
+   	console.log('addnewtoDB USER: ' + user);
+   	console.log('addnewto PID: ' + pid);
+
     
 }; 
 
@@ -134,7 +147,7 @@ var alltags=["hipster","wtf","lol"];
 function testloop(){
     for (i = 0; i < alltags.length; i++){
     
-        tag = alltags[i];
+        tag = alltags[i];		
         console.log('get: ' + tag);
         queryInsta(tag);
 
@@ -146,8 +159,9 @@ function testloop(){
 * load first images
 *
 */
-
 console.log('everything loaded. grab first images.');
+console.log('');
+
 current_tag = 'hipster';
 updatetag('hipster');
 queryInsta('hipster');

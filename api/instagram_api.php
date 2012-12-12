@@ -8,14 +8,16 @@ $thing = array();
 
     // Get class for Instagram
     // More examples here: https://github.com/cosenary/Instagram-PHP-API
-    require_once 'instagram.class.php';
+    require_once 'instagram.class.php';   // THIS IS THE CLASS THAT ALLOWS US TO ACCESS THE INSTAGRAM API 
 
     // Initialize class with client_id
     // Register at http://instagram.com/developer/ and replace client_id with your own
-    $instagram = new Instagram('5713260f4a2b4ef3bc0b2447043e02a1');
+    $instagram = new Instagram('5713260f4a2b4ef3bc0b2447043e02a1'); 
 
     // Set keyword for #hashtag
-    if ( $_POST ) {
+	// An associative array of variables passed to the current script via the HTTP POST method.
+	
+    if ( $_POST ) {   						
         $tag = $_POST['tag'];
     } else { $tag = 'wtf'; }
 
@@ -30,11 +32,12 @@ $thing = array();
 
     // Show results
     // Using for loop will cause error if there are less photos than the limit
-    foreach(array_slice($media->data, 0, $limit) as $data)
-    {
+    foreach(array_slice($media->data, 0, $limit) as $data){
         $id = $data->id;
         $url = $data->images->standard_resolution->url;
         $user = $data->user->username;
+        $wins = $data->user->wins;
+        $losses = $data->user->losses;
                 
         // write to DB here
         $thing['id'] = $id;
@@ -43,7 +46,9 @@ $thing = array();
         $thing['tag'] = $tag;
         $thing['wins'] = 0;
         $thing['losses'] = 0;
-
+		
+		echo ('it works');
+		
         $db->things->insert($thing);
 
         // Show photo for debugging
