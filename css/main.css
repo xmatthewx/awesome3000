@@ -25,9 +25,9 @@ header h1 {
     height:0;
     padding:98px 0 0;
     overflow:hidden; /* img txt replacement: see: http://www.mezzoblue.com/tests/revised-image-replacement  */ 
-    background: url('../images/instaslam_logo.png') center center no-repeat;    
+    background: url('../images/instaslam_logo.png') center center no-repeat;   
+    cursor:pointer; 
 }
-
 
 .tag {
 	font-family: "futura-pt", Helvetica, Arial, sans-serif;

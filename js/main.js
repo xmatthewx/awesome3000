@@ -79,7 +79,8 @@ $('#choice a').click( function(){
     user = $('#' + id).data("slam").user;						//	user id
     var tag = $('#' + id).data("slam").tag;						// 	tag
 
-    alert(user + '\'s pic is the most #' +tag+ '!\n\nhi jenn, give me html with some good ids or classes and i will replace this.');
+    /*alert(user + '\'s pic is the most #' +tag+ '!\n\nhi jenn, give me html with some good ids or classes and i will replace this.');*/
+    window.location ="results.html";
     
     queryInsta(current_tag);				// Ask instagram for tag name
     addnewtoDB(current_tag);				// Add new photo to databse
