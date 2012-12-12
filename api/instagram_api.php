@@ -40,7 +40,7 @@ $thing = array();
         $losses = $data->user->losses;
                 
         // write to DB here
-        $thing['id'] = $id;
+        $thing['instaid'] = $id;
         $thing['url'] = $url;
         $thing['user'] = $user;
         $thing['tag'] = $tag;
