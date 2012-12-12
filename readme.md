@@ -7,7 +7,7 @@ files
 * results.html          ... the page you get after you click a photo on index.html (instead of the alert dialogue)
 * stats.html            ... leaderboard
 * api/instagram_api.php ... php to grab new pics from instagram and add to db
-* ?????                 ... php to grab 2 imgs from mongo db
+* api/getThings.php     ... php to grab 2 imgs from mongo db
 * ?????                 ... php to add win to mongo db
 * ?????                 ... php to grab stats
 * ?????                 ... php to leader board
