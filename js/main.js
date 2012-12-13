@@ -12,8 +12,8 @@
  var instagram_url;
  var current_tag;
 
- var site_url = 'http://localhost/amazon/instaslam'; // change to your localhost or live site url
  var site_url = 'http://ec2-50-17-170-92.compute-1.amazonaws.com'; // change to your localhost or live site url
+ var site_url = 'http://localhost/amazon/instaslam'; // change to your localhost or live site url
 
 // var username = 'item.user.username';
 
@@ -86,7 +86,7 @@ $('#choice a').click( function(){
     win_url = $(this).find('img').attr('src')
 
     /*alert(user + '\'s pic is the most #' +tag+ '!\n\nhi jenn, give me html with some good ids or classes and i will replace this.');*/
-    window.location = site_url +"/results.php?win_url="+win_url+"&user="+user;
+    window.location = site_url +"/results.php?win_url="+win_url+"&user="+user+"&tag="+current_tag;
     
     queryInsta(current_tag);				// Ask instagram for tag name
     addnewtoDB(current_tag);				// Add new photo to databse

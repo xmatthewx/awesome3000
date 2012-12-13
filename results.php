@@ -28,6 +28,7 @@
     <?php 
     $win_url = $_GET["win_url"]; 
     $user = $_GET["user"]; 
+    $tag = $_GET["tag"]; 
     ?>
     <script>
 
@@ -70,7 +71,7 @@
         	</div><!-- end img-and-cap -->
       
             <div id="score-blurb">
-            	<p><span id="wins" class="bold">52</span>/<span id="count" >973</span> PEOPLE agree that this photo is the most <span class="bold">#hipster.</span></p>
+            	<p><span id="wins" class="bold">52</span>/<span id="count" >973</span> PEOPLE agree that this photo is the most <span class="bold">#<?php echo $tag ?>.</span></p>
             </div> <!-- end score blurb -->
             
             <div id="score-btns">
