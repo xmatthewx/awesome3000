@@ -12,8 +12,8 @@
  var instagram_url;
  var current_tag;
 
- var site_url = 'http://ec2-50-17-170-92.compute-1.amazonaws.com'; // change to your localhost or live site url
  var site_url = 'http://localhost/amazon/instaslam'; // change to your localhost or live site url
+ var site_url = 'http://ec2-50-17-170-92.compute-1.amazonaws.com'; // change to your localhost or live site url
 
 // var username = 'item.user.username';
 
