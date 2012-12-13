@@ -189,6 +189,7 @@ nav li#fame {
     width:416px;
     background:#eee;
     margin-top: -30px;
+    box-shadow:1px 1px 4px rgba(0,0,0,0.2);
 }
 
 #left-choice {
