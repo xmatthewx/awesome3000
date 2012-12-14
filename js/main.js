@@ -133,7 +133,7 @@ function grabInsta(){
     console.log('get instagram json: ');
 
 	$.getJSON( instagram_url, function(insta){
-    	// console.log(insta);
+    	console.log(insta);
     	displayImage(insta.data[0],insta.data[1]);
     }); // END getJSON
     
